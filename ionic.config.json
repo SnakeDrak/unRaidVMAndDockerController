@@ -1,6 +1,8 @@
 {
   "name": "unRaidVMController",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
-  "id": "ec59a90a"
+  "id": ""
 }

@@ -1,1 +1,34 @@
+ion-button {
+  margin-top: 2em;
+}
 
+.vms {
+  .running ion-button,
+  .started ion-button {
+    --background: var(--ion-color-success);
+  }
+  .paused ion-button,
+  .unknown ion-button,
+  .pmsuspended ion-button {
+    --background: var(--ion-color-warning);
+  }
+}
+
+.dockers {
+  .started ion-button {
+    --background: var(--ion-color-success);
+  }
+
+  .paused ion-button {
+    --background: var(--ion-color-warning);
+  }
+}
+
+ion-spinner {
+  margin-right: 1em;
+  vertical-align: bottom;
+}
+
+ion-icon {
+  vertical-align: text-top;
+}

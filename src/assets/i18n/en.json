@@ -1,0 +1,37 @@
+{
+  "HOME": {
+    "TITLE_PAGE": "VM and Docker Controller",
+    "VMS": "Virtual machines:",
+    "DOCKERS": "Dockers:",
+    "LOADING_VMS": "Loading virtual machines...",
+    "LOADING_DOCKERS": "Loading dockers..."
+  },
+
+  "UNRAID": {
+    "VM_domain-start": "Start",
+    "VM_domain-stop": "Stop",
+    "VM_domain-destroy": "Force stop",
+    "VM_domain-restart": "Restart",
+    "VM_domain-resume": "Resume",
+    "VM_domain-pause": "Pause",
+    "VM_pmwakeup": "Resume",
+    "VM_domain-pmsuspend": "Hibernate",
+    "DOCKER_start": "Start",
+    "DOCKER_stop": "Stop",
+    "DOCKER_restart": "Restart",
+    "DOCKER_resume": "Resume",
+    "DOCKER_pause": "Pause"
+  },
+
+  "LOGIN": {
+    "TITLE": "Login",
+    "ACCESS_INFO": "unRaid access info",
+    "HOSTNAME": "Hostname/IP",
+    "PASSWORD": "Password for the root",
+    "USE_SSL": "Use SSL",
+    "LOGIN": "Log-in",
+    "LOADING": "Loading, please wait...",
+    "WRONG_PASSWORD": "Wrong password.",
+    "SERVER_NOT_FOUND": "Server not found."
+  }
+}

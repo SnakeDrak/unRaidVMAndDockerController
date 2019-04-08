@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  unRaidTimeout: 10000,
+  user: 'root'
 };

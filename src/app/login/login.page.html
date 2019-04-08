@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ "LOGIN.TITLE" | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="icons">
+    <ion-icon name="desktop"></ion-icon>
+    <ion-icon name="apps"></ion-icon>
+  </div>
+  <h2 text-center>{{ "LOGIN.ACCESS_INFO" | translate }}</h2>
+  <p text-center>
+    <ion-text color="danger">{{ error }}</ion-text>
+  </p>
+  <div class="inputs">
+    <ion-item>
+      <ion-label position="stacked">{{ "LOGIN.HOSTNAME" | translate }}</ion-label>
+      <ion-input [(ngModel)]="host"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{ "LOGIN.PASSWORD" | translate }}</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>{{ "LOGIN.USE_SSL" | translate }}</ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="ssl"></ion-checkbox>
+    </ion-item>
+
+    <ion-button (click)="submit()" expand="block">{{ "LOGIN.LOGIN" | translate }}</ion-button>
+  </div>
+</ion-content>

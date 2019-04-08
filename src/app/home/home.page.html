@@ -1,12 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title> {{ serverName }} / {{ "HOME.TITLE_PAGE" | translate }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <h4><ion-icon name="desktop"></ion-icon> {{ "HOME.VMS" | translate }}</h4>
+  <div class="vms">
+    <p *ngIf="!vms || vms.length === 0"><ion-spinner></ion-spinner> {{ "HOME.LOADING_VMS" | translate }}</p>
+    <div *ngIf="vms && vms.length">
+      <p *ngFor="let vm of vms" [class]="vm.state">
+        <ion-button expand="block" (click)="showVMActions(vm)">
+          <ion-spinner *ngIf="vm.is_loading"></ion-spinner>
+          {{ vm.name }}
+        </ion-button>
+      </p>
+    </div>
+  </div>
+  <h4><ion-icon name="apps"></ion-icon> {{ "HOME.DOCKERS" | translate }}</h4>
+  <div class="dockers">
+    <p *ngIf="!dockers || dockers.length === 0"><ion-spinner></ion-spinner> {{ "HOME.LOADING_DOCKERS" | translate }}</p>
+    <div *ngIf="dockers && dockers.length">
+      <p *ngFor="let docker of dockers" [class]="docker.state">
+        <ion-button expand="block" (click)="showDockerActions(docker)">
+          <ion-spinner *ngIf="docker.is_loading"></ion-spinner>
+          {{ docker.name }}
+        </ion-button>
+      </p>
+    </div>
+  </div>
 </ion-content>

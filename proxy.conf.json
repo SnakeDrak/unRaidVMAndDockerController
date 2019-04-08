@@ -1,0 +1,11 @@
+{
+  "/unraid/*": {
+    "target": "https://2108410a636e8c4b0a4db769dbe488b4a8491856.unraid.net/",
+    "changeOrigin": true,
+    "secure": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/unraid": ""
+    }
+  }
+}
